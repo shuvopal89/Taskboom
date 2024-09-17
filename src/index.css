@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+    font-family: "Poppins", sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+.hideScrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1E2836;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #475363;
+    border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+    background-color: #616c7a;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #8b929b;
+}
+
+.homePageRightSection {
+    width: calc(100% - 250px)
+}
+
+.chartSection {
+    width: calc(100% - 430px);
+}
+
+.commonTasksSection:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.commonTasksSection:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+@media screen and (max-width: 1024px) {
+    .homePageRightSection {
+        width: calc(100% - 65px);
+    }
+
+    .chartSection {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .homePageRightSection {
+        width: 100%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 3px;
+    }
+}
+
+.scaleAnimShow {
+    animation: scaleShow 0.1s;
+}
+
+@keyframes scaleShow {
+    0% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.animation-pulse {
+    animation: pulse;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 #22c55e;
+    }
+
+    100% {
+        box-shadow: 0 0 0 20px rgba(229, 62, 62, 0);
+    }
+}
+
+.switchCircle {
+    transition: all 0.2s;
+}
+
+.switchCircleActive {
+    transform: translateX(16px);
+}
+
+.switchCircleInactive {
+    transform: translateX(0px);
+}
+
+@keyframes statusAnim {
+    0% {
+        transform: translateX(25%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+.statusAnim {
+    animation: statusAnim 0.2s ease;
+}
+
+.searchItem:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+.searchItem:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
